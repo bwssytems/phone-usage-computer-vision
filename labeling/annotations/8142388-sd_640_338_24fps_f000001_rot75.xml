@@ -1,0 +1,26 @@
+<annotation>
+	<folder>rot_images</folder>
+	<filename>8142388-sd_640_338_24fps_f000001_rot75.jpg</filename>
+	<path>/home/bsamuels/phone_usage_test/workspace/rot_images/8142388-sd_640_338_24fps_f000001_rot75.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>494</width>
+		<height>706</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>phone</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>192</xmin>
+			<ymin>121</ymin>
+			<xmax>239</xmax>
+			<ymax>277</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>rot_images</folder>
+	<filename>20250718_150650_075a44fc_f000021_rot45.jpg</filename>
+	<path>/home/bsamuels/phone_usage_test/workspace/rot_images/20250718_150650_075a44fc_f000021_rot45.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3180</width>
+		<height>3180</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>phone</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1054</xmin>
+			<ymin>1428</ymin>
+			<xmax>1230</xmax>
+			<ymax>1535</ymax>
+		</bndbox>
+	</object>
+</annotation>

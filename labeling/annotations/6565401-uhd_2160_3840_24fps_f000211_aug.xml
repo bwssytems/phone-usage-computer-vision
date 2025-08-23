@@ -1,0 +1,26 @@
+<annotation>
+	<folder>aug_images</folder>
+	<filename>6565401-uhd_2160_3840_24fps_f000211_aug.jpg</filename>
+	<path>/home/bsamuels/phone_usage_test/workspace/aug_images/6565401-uhd_2160_3840_24fps_f000211_aug.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1440</width>
+		<height>2560</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>phone</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>361</xmin>
+			<ymin>1354</ymin>
+			<xmax>448</xmax>
+			<ymax>1605</ymax>
+		</bndbox>
+	</object>
+</annotation>

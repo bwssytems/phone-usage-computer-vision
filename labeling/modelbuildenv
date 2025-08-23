@@ -1,0 +1,8 @@
+export MODEL_TYPE=efficientdet_lite0
+export USE_MULTI_GPUS=False
+export DO_RESIZE=True
+export RETRAIN_EPOCHS=75
+export RETRAIN_BATCH_SIZE=4
+export TRAIN_WHOLE_MODEL=True
+export USE_QUANT_INT8=False
+export USE_EVAL_TFLITE=False

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>6565401-uhd_2160_3840_24fps_f000211.jpg</filename>
+	<path>/home/bsamuels/git/phone-usage-computer-vision/labeling/images/6565401-uhd_2160_3840_24fps_f000211.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1440</width>
+		<height>2560</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>phone</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>244</xmin>
+			<ymin>1013</ymin>
+			<xmax>401</xmax>
+			<ymax>1278</ymax>
+		</bndbox>
+	</object>
+</annotation>
