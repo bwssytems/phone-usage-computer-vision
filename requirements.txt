@@ -1,5 +1,0 @@
-opencv-python
-albumentations
-pycocotools
-boto3
-tflite-model-maker>=0.4.3

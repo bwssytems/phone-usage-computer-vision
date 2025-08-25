@@ -1,0 +1,7 @@
+# data.yaml
+path: /home/bsamuels/phoneusagetest/workspace/dataset    # or relative (.)
+train: images/train
+val: images/val
+test: images/test                   # optional
+names: [phone]          # your class list in order
+nc: 1
