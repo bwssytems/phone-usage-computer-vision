@@ -1,5 +1,5 @@
 # data.yaml
-path: /home/bsamuels/phoneusagetest/workspace/dataset    # or relative (.)
+path: ../yolo_dataset    # or relative (.)
 train: images/train
 val: images/val
 test: images/test                   # optional
