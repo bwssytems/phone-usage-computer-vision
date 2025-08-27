@@ -121,12 +121,15 @@ def main():
         out_path = os.path.abspath(args.videoout)
         print("Video output path:", out_path)
         fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-        w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)) or 960
-        h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)) or 720
-        fps = cap.get(cv2.CAP_PROP_FPS)
-        if not fps or np.isnan(fps) or fps <= 1:
-            fps = 30.0
-        writer = cv2.VideoWriter(out_path, fourcc, fps, (w, h))
+
+        if max_h is not None:
+            h, w = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)), int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+            if h > max_h:
+                scale = max_h / float(h)
+                vid_w = int(w * scale)
+                vid_h = int(h * scale)
+
+        writer = cv2.VideoWriter(out_path, fourcc, target_fps, (vid_w, vid_h))
 
     # FPS overlay settings
     row_size, text_x = 40, 760
