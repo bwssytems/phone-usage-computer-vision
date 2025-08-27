@@ -1,8 +1,12 @@
 #!/bin/bash
 
 if [ -d "workspace" ]; then
-  echo "Workspace already exists. Please remove it before retraining."
-  exit 1
+  echo "Workspace already exists."
+  read -p "Do you want to continue anyway? (y/N): " choice
+  case "$choice" in 
+    y|Y ) echo "Continuing despite existing workspace...";;
+    * ) echo "Exiting."; exit 1;;
+  esac
 fi
 
 source tf_modelbuildenv

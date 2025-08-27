@@ -80,6 +80,20 @@ ScaffoldingReadMe.txt
 # StyleCop
 StyleCopReport.xml
 
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+# Uncomment if you have tasks that create the project's static files in wwwroot
+#wwwroot/
+
+# Visual Studio 2017 auto generated files
+Generated\ Files/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+
+
 # Files built by Visual Studio
 *_i.c
 *_p.c
@@ -419,3 +433,4 @@ FodyWeavers.xsd
 
 # Do not include items for testing
 workspace/
+tflite_runtime*.*

@@ -59,19 +59,12 @@ def main():
                     help="Synchronize to video FPS (files only). Use 'off' to run as fast as possible.")
     ap.add_argument("--max_fps", type=float, default=None,
                     help="Optional cap on playback FPS (files only).")
-    ap.add_argument("--display-size", type=str, default=None,
-                    help="Resize output display window, e.g. 1280x720. Inference still runs on original frames.")
+    ap.add_argument("--max-height", type=int, default=720,
+                    help="Max display height in pixels. Frame will be scaled down proportionally if taller.")
 
     args = ap.parse_args()
 
-    disp_wh = None
-    if args.display_size:
-        try:
-            w, h = args.display_size.lower().split("x")
-            disp_wh = (int(w), int(h))
-        except Exception:
-            print("Invalid --display-size format. Use WxH, e.g. 1280x720")
-            disp_wh = None
+    max_h = args.max_height
 
     # Load model
     model = YOLO(args.model)
@@ -197,8 +190,13 @@ def main():
                     cv2.FONT_HERSHEY_PLAIN, font_size, text_color, font_thickness)
 
         frame_to_show = frame
-        if disp_wh is not None:
-            frame_to_show = cv2.resize(frame, disp_wh, interpolation=cv2.INTER_LINEAR)
+        if max_h is not None:
+            h, w = frame.shape[:2]
+            if h > max_h:
+                scale = max_h / float(h)
+                new_w = int(w * scale)
+                new_h = int(h * scale)
+                frame_to_show = cv2.resize(frame, (new_w, new_h), interpolation=cv2.INTER_AREA)
 
         # Show & optionally write
         cv2.imshow("YOLOv11 Detection", frame_to_show)

@@ -1,0 +1,27 @@
+# 1) fresh env
+conda create -n ultralytics-env python=3.11 -y
+conda activate ultralytics-env
+
+# 2) keep channel mixing under control
+conda config --set channel_priority strict
+
+# 3) Install PyTorch from the official channel (choose ONE of these):
+# CPU-only:
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
+# CUDA 12.x example:
+# conda install -y pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+
+# 4) Pin MKL BELOW 2024.1 to avoid the iJIT issue
+conda install -y "mkl<2024.1" "mkl-devel<2024.1" "mkl-include<2024.1" -c conda-forge
+
+# 5) Install Ultralytics
+pip install -U ultralytics
+
+# 6) Sanity test
+python - <<'PY'
+import torch
+print("Torch:", torch.__version__)
+PY
+
+# 7) Now YOLO checks
+yolo checks
